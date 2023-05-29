@@ -1,38 +1,53 @@
-:root {
-  --header: 3rem;
-  --footer: 40px;
-  --main: calc(100vh - calc(var(--header) + var(--footer)));
+@font-face {
+  font-family: Norse;
+  src: url(./assets/Norse-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  border: 0px solid transparent;
-  background: #7a7a7a;
+  display: flex;
 }
 
-#container {
-  border: 0px solid transparent;
+div.left-content {
   height: 100vh;
-  color: white;
+  width: 40vw;
+  background-color: red;
 }
-#container > * {
+
+div.overlay-left {
+  margin-top: 20vh;
   display: flex;
-  justify-content: center;
+  height: 20vh;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+div.overlay-img {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-#header {
-  height: var(--header);
-  background: #111111;
+img.odin-logo {
+  height: 90%;
+  width: auto;
+  object-fit: contain;
 }
-#main-content {
-  height: var(--main);
-  background: #343434;
-  margin-right: auto;
-  margin-left: auto;
+
+div.overlay-text {
+  width: 50%;
+  text-align: center;
+  font-size: 9em;
+  font-family: Norse;
 }
-#footer {
-  height: var(--footer);
-  background: #232323;
-}      
+
+div.right-content {
+  height: 100vh;
+  width: 60vw;
+  background-color: blue;
+}
+
