@@ -3,26 +3,73 @@
   src: url(./assets/Norse-Bold.otf);
 }
 
+:root {
+  --light-green: rgb(233, 255, 212);
+  --dark-green: rgb(61, 80, 36);
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
   display: flex;
+  flex-wrap: wrap;
 }
 
-div.left-content {
-  height: 100vh;
-  width: 40vw;
-  background-color: red;
+a {
+  color: inherit;
+}
+
+input {
+  height: 32px;
+  width: 300px;
+  border: 2px solid var(--light-green);
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--dark-green);
+  background-color: var(--light-green);
+  filter: drop-shadow(0px 4px 2px rgb(222, 222, 222));
+}
+
+button {
+  background-color: var(--dark-green);
+  padding: 16px 44px;
+  border: none; 
+  border-radius: 8px;
+  filter: drop-shadow(0px 4px 2px rgb(149, 149, 149));
+}
+
+.content {
+  width: 100%;
+}
+
+div.content.left {
+  height: 300px;
+  background-image: url(./assets/trees.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 div.overlay-left {
-  margin-top: 20vh;
+  margin-top: 70px;
   display: flex;
-  height: 20vh;
+  height: 150px;
   background-color: rgb(0, 0, 0, 0.2);
+}
+
+span.img-left-source {
+  color: white;
+  font-size: 24px;
+  margin-top: auto;
+  margin-bottom: 8px;
+  align-self: center;
 }
 
 div.overlay-img {
@@ -40,14 +87,116 @@ img.odin-logo {
 
 div.overlay-text {
   width: 50%;
-  text-align: center;
-  font-size: 9em;
+  text-align: left;
+  margin: auto;
+  color: white;
+  font-size: 8rem;
   font-family: Norse;
 }
 
-div.right-content {
-  height: 100vh;
-  width: 60vw;
-  background-color: blue;
+div.content.right {
+  background-color: var(--light-green);
+  height: 700px;
 }
 
+div.section.cta {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+div.cta-text {
+  margin: 0 200px 24px 24px;
+  font-size: .8em;
+}
+
+div.section.form {
+  height: 55%;
+  border: 2px solid rgb(225, 225, 225);
+  border-radius: 0 0 4px 4px;
+  background-color: white;
+  filter: drop-shadow(0px 4px 2px rgb(222, 222, 222));
+}
+
+form {
+  height: 100%;
+}
+
+div.form-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div.form-left,
+div.form-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+label>span {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(39, 39, 39);
+}
+
+div.section.login {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.submit-form {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.submit-form>button {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  align-self: center;
+}
+
+div.existing-account {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1200px) {
+  body { 
+    background-color: rgb(0, 255, 8);
+  }
+
+  div.content.left {
+    width: 40%;
+    height: 100vh;
+  }
+
+  div.content.right {
+    width: 60%;
+    height: 100vh;
+  }
+
+  div.section.cta {
+    height: 30%;
+  }
+
+  div.cta-text {
+    font-size: 1.2em;
+  }
+
+  div.section.form {
+    height: 39%;
+  }
+
+}

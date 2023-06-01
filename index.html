@@ -9,16 +9,71 @@
     <title></title>
   </head>
   <body>
-   <div class="left-content">
+   <div class="content left">
     <div class="overlay-left">
       <div class="overlay-img">
         <img class="odin-logo" src="assets/odin-lined.png" alt="odin-project-logo">
       </div>
       <div class="overlay-text">ODIN</div>
     </div>
+    <span class="img-left-source">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></span>
    </div>
-   <div class="right-content">
-    TODO
+   <div class="content right">
+    <div class="section cta">
+      <div class="cta-text">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+        <br/>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+    </div>
+    <div class="section form">
+      <form action="" method="post" id="register-form" class="register-form">
+        <div class="form-container">
+          <div class="form-left">
+            <label for="first-name">
+              <span>First Name</span>
+              <br/>
+              <input required type="text" id="first-name" name="first-name" class="form-input" placeholder="John" pattern="[A-Za-z]{3,}">
+            </label>
+            <label for="email">
+              <span>Email</span>
+              <br/>
+              <input required type="email" id="email" name="email" class="form-input" placeholder="cool_cat@hotmail.com">
+            </label>
+            <label for="password">
+              <span>Password</span>
+              <br/>
+              <input required type="password" id="password" name="password" class="form-input">
+            </label>
+          </div>
+          <div class="form-right">
+            <label for="last-name">
+              <span>Last Name</span>
+              <br/>
+              <input required type="text" id="last-name" name="last-name" class="form-input" placeholder="Smith" pattern="[A-Za-z]{3,}">
+            </label>
+            <label for="phone-number">
+              <span>Phone Number</span>
+              <br/>
+              <input required type="text" id="phone-number" name="phone-number" class="form-input" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="555-555-5555">
+            </label>
+            <label for="confirm-password">
+              <span>Confirm Password</span>
+              <br/>
+              <input required type="password" id="confirm-password" name="confirm-password" class="form-input">
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="section login">
+      <div class="submit-form">
+        <button type="submit" class="btn-submit-form" id="submit-form" form="register-form">Create Account</button>
+      </div>
+      <div class="existing-account">
+        <span>Already have an account? <a href="login.html">Log in</a>.</span>
+      </div>
+    </div>
    </div>
   </body>
 </html>
